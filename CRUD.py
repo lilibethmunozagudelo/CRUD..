@@ -196,10 +196,11 @@ while True:
             now= datetime.now()
             datosActualizados["estado"]="Finalizada"
             datosActualizados["fecha_finalizacion"]=str(now.day) +"/"+ str(now.month) +"/"+ str(now.year)
-            now = datetime.now()
-            datosActualizados["fecha_inicio"]=str(now.day) +"/"+ str(now.month) +"/"+ str(now.year)
-            actualizar(ruta, id_actulizar, datosActualizados)
-            print()
+            
+        now = datetime.now()
+        datosActualizados["fecha_inicio"]=str(now.day) +"/"+ str(now.month) +"/"+ str(now.year)
+        actualizar(ruta, id_actulizar, datosActualizados)
+        print()
     elif accion=="3":
         datosActualizados={"tarea":"", "descripcion":"", "estado":"", "fecha_inicio":"", "fecha_finalizacion":""}
         print("* Crear nueva tarea *")
